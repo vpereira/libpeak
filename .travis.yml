@@ -6,7 +6,7 @@ install:
     - sudo apt-get install -qq  g++-4.8 build-essential pmake cppcheck rats sparse
     - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50
     - sudo apt-get install --allow-unauthenticated -qq clang-3.3
-script: make
+script: pmake
 after_success:
   - cd regress && pmake && cd ..
   - pmake check
