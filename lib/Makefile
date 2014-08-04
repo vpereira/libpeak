@@ -16,7 +16,7 @@ LINTFLAGS+=	-I$(.CURDIR)/../include -I$(.CURDIR)/../lib
 WARNINGS_SET?=	MEDIUM
 WARNS?=		3
 
-CFLAGS+=-g -m64 -std=gnu99 -fPIC
+CFLAGS+=-g -m64 -fPIC -std=gnu99
 CFLAGS+=-I$(.CURDIR)/../include -I$(.CURDIR)/../lib
 CFLAGS+=-I/usr/local/include -fsanitize=address
 
