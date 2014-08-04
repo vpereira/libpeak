@@ -18,9 +18,9 @@ WARNS?=		3
 
 CFLAGS+=-g -m64 -std=gnu99 -fPIC
 CFLAGS+=-I$(.CURDIR)/../include -I$(.CURDIR)/../lib
-CFLAGS+=-I/usr/local/include
+CFLAGS+=-I/usr/local/include -fsanitize=address
 
-LDADD+=	-lc -pthread -lmagic
+LDADD+=	-lc -pthread -lmagic -fsanitize=address
 LDADD+= -L/usr/local/lib
 
 _OSTYPE!=uname -s
